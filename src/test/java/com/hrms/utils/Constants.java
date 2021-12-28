@@ -1,0 +1,14 @@
+package com.hrms.utils;
+
+public class Constants {
+
+    public static final String CONFIGURATION_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/configs/configuration.properties";
+
+    public static final String TEST_DATA_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/testData/hrmsData.xlsx";
+
+    public static final String SCREENSHOT_FILEPATH = System.getProperty("user.dir") + "/screenShots/";
+
+    public static final int IMPLICIT_WAIT = 10;
+
+    public static final int EXPLICIT_WAIT = 20;
+}
