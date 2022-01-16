@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         dryRun = false,      //When set as true, it will run over the feature steps and reveal unimplemented steps.
         //If there is no unimplemented steps, dry run will do noting.
         //When set as false, it will run all the features.
-        tags = "@configuration",  //can add one or more tag in tags part.
+        tags = "@parameter",  //can add one or more tag in tags part.
         //If wants to run more than one tag: tags = {"@smoke", "@whatever"}
         plugin = {"pretty",  //will print executed steps inside console
                 "html:target/cucumber-default-reports", //generate default html report?

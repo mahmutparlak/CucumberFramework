@@ -17,7 +17,6 @@ Feature: Syntax HRMS API Workflow
     When a GET call is made to retrieve the created employee
     Then the status code for retrieving the created employee is 200
     And the retrieved employeeID matches the globally stored employee ID
-    And the retrieved data matches the data used to created an employee
 
   @Progression
   Scenario: Retrieving all employees and verifying that created employee details display in the response

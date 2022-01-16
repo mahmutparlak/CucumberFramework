@@ -25,11 +25,16 @@ public class BaseClass {
 
         switch (ConfigsReader.getPropertyValue("browser").toLowerCase()) {
             case "chrome" -> {
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.setHeadless(true); //This code will do all the test cases without opening the browser.
+               if (ConfigsReader.getPropertyValue("headless").equals("true")) {
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.setHeadless(true); //This code will do all the test cases without opening the browser.
 
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(chromeOptions);
+                } else {
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                }
             }
             case "firefox" -> {
                 WebDriverManager.firefoxdriver().setup();
