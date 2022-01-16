@@ -20,7 +20,6 @@ public class DBUtils {
             connection = DriverManager.getConnection(ConfigsReader.getPropertyValue("DBUrl"),
                                                                 ConfigsReader.getPropertyValue("DBUserName"),
                                                                 ConfigsReader.getPropertyValue("DBPassword"));
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
